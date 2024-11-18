@@ -16,10 +16,22 @@ if connection.is_connected():
 # statements in 'Python'
 cursor = connection.cursor()
 
-createDB = "CREATE DATABASE Fantasy_Football_DB"
-query = "SELECT * FROM your_table"
+createDB = "CREATE DATABASE FANTASY_FOOTBALL_DB"
+createLEAGUE = "CREATE TABLE LEAGUE"
+createDRAFT = "CREATE TABLE DRAFT"
+createWEEK = "CREATE TABLE WEEK"
+createOWNER = "CREATE TABLE OWNER"
+createTEAM = "CREATE TABLE TEAM"
+createROSTER = "CREATE TABLE ROSTER"
+createPLAYER = "CREATE TABLE PLAYER"
+createPLAYER_STATS = "CREATE TABLE PLAYER_STATS"
+createTRANSACTIONS = "CREATE TABLE TRANSACTIONS"
+createDRAFT_PICKS = "CREATE TABLE DRAFT_PICKS"
+createLeague = "CREATE TABLE POINT_RULES"
+query1 = "SELECT * FROM your_table"
+
 cursor.execute(createDB)
-cursor.execute(query)
+cursor.execute(query1)
 results = cursor.fetchall()
 
 for row in results:
