@@ -30,4 +30,4 @@ for row in results:
 
 # Ending functions    
 cursor.close()
-connection.close()
+connection.close()  
