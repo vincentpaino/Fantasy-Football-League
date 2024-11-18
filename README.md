@@ -21,3 +21,7 @@ for one project don’t interfere with other projects."
 
 "After creating the environment, you’ll need to activate it to use the isolated interpreter and libraries."
 Command: venv\Scripts\activate
+
+Git help:
+Before doing anytihng always run
+'git pull origin main'
