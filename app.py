@@ -1,4 +1,5 @@
 import mysql.connector
+import declarations.py
 
 # Define the connection parameters
 connection = mysql.connector.connect(
@@ -16,19 +17,20 @@ if connection.is_connected():
 # statements in 'Python'
 cursor = connection.cursor()
 
-createDB = "CREATE DATABASE FANTASY_FOOTBALL_DB"
-createLEAGUE = "CREATE TABLE LEAGUE"
-createDRAFT = "CREATE TABLE DRAFT"
-createWEEK = "CREATE TABLE WEEK"
-createOWNER = "CREATE TABLE OWNER"
-createTEAM = "CREATE TABLE TEAM"
-createROSTER = "CREATE TABLE ROSTER"
-createPLAYER = "CREATE TABLE PLAYER"
-createPLAYER_STATS = "CREATE TABLE PLAYER_STATS"
-createTRANSACTIONS = "CREATE TABLE TRANSACTIONS"
-createDRAFT_PICKS = "CREATE TABLE DRAFT_PICKS"
-createLeague = "CREATE TABLE POINT_RULES"
-query1 = "SELECT * FROM your_table"
+createDB = "CREATE DATABASE Fantasy_Football_DB"
+createLEAGUE = "CREATE TABLE League"
+createDRAFT = "CREATE TABLE Draft"
+createWEEK = "CREATE TABLE Week"
+createOWNER = "CREATE TABLE Owner"
+createTEAM = "CREATE TABLE Team"
+createROSTER = "CREATE TABLE Roster"
+createPLAYER = "CREATE TABLE Player"
+createPLAYER_STATS = "CREATE TABLE Player_Stats"
+createTRANSACTIONS = "CREATE TABLE Transactions"
+createDRAFT_PICKS = "CREATE TABLE Draft_Picks"
+createLeague = "CREATE TABLE Point_Rules"
+
+query1 = "SELECT * FROM League"
 
 cursor.execute(createDB)
 cursor.execute(query1)
