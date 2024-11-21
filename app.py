@@ -1,5 +1,5 @@
 import mysql.connector
-import declarations.py
+import declarations
 
 # Define the connection parameters
 connection = mysql.connector.connect(
@@ -17,22 +17,9 @@ if connection.is_connected():
 # statements in 'Python'
 cursor = connection.cursor()
 
-createDB = "CREATE DATABASE Fantasy_Football_DB"
-createLEAGUE = "CREATE TABLE League"
-createDRAFT = "CREATE TABLE Draft"
-createWEEK = "CREATE TABLE Week"
-createOWNER = "CREATE TABLE Owner"
-createTEAM = "CREATE TABLE Team"
-createROSTER = "CREATE TABLE Roster"
-createPLAYER = "CREATE TABLE Player"
-createPLAYER_STATS = "CREATE TABLE Player_Stats"
-createTRANSACTIONS = "CREATE TABLE Transactions"
-createDRAFT_PICKS = "CREATE TABLE Draft_Picks"
-createLeague = "CREATE TABLE Point_Rules"
-
 query1 = "SELECT * FROM League"
 
-cursor.execute(createDB)
+cursor.execute(declarations.createDB)
 cursor.execute(query1)
 results = cursor.fetchall()
 

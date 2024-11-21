@@ -23,5 +23,18 @@ for one project don’t interfere with other projects."
 Command: venv\Scripts\activate
 
 Git help:
-Before doing anytihng always run
+
+Before doing anything, always run
 'git pull origin main'
+
+To push code...
+Always check 'git status'
+
+if on main branch...
+Do 'git add .' to add all the files 
+
+Then 'git commit -m "__" '
+
+Then 'git push origin main'
+
+
