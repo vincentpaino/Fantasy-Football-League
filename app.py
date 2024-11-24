@@ -1,5 +1,7 @@
 import mysql.connector
 import declarations
+import queries
+import data
 
 # Define the connection parameters
 connection = mysql.connector.connect(
@@ -16,6 +18,8 @@ if connection.is_connected():
 # which is used to execute the 'SQL' 
 # statements in 'Python'
 cursor = connection.cursor()
+
+#initialize tables and populate
 
 query1 = "SELECT * FROM League"
 
