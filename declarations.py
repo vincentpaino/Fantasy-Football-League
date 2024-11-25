@@ -1,7 +1,7 @@
 #Table declarations
 createDB = "CREATE DATABASE Fantasy_Football_DB"
-createLEAGUE = "CREATE TABLE League(League_id INT, Name VARCHAR(50), No_teams INT, Szn_start DATE, Szn_end DATE, UNIQUE(League_id), PRIMARY KEY(League_id))"
-createDRAFT = "CREATE TABLE Draft(League_id INT, rounds INT, pick_order INT, start_time DATE, end_time DATE, FOREIGN KEY(League_id) REFERENCES League(League_id) )"
+createLEAGUE = "CREATE TABLE League(League_id INT AUTO_INCREMENT PRIMARY KEY, League_name VARCHAR(50) NOT NULL, No_teams INT, Szn_start DATE, Szn_end DATE)"
+createDRAFT = "CREATE TABLE Draft(League_id INT, Rounds INT, Pick_order INT, Start_time DATE, End_time DATE, FOREIGN KEY(League_id) REFERENCES League(League_id) )"
 createWEEK = "CREATE TABLE Week(Week_no INT, Current_week INT, Start_date DATE, End_date DATE, Season INT, League_id INT, UNIQUE(Week_no), PRIMARY KEY(Week_no), FOREIGN KEY(League_id) REFERENCES League(League_id) )"
 createOWNER = "CREATE TABLE Owner(Fname VARCHAR(30), Lname VARCHAR(30), Owner_id INT, League_id INT, UNIQUE(Owner_id), PRIMARY KEY(Owner_id), FOREIGN KEY(League_id) REFERENCES League(League_id) )"
 createTEAM = "CREATE TABLE Team(Team_id INT, Team_name VARCHAR(30), Owner_id INT, League_id INT,UNIQUE(Team_id) PRIMARY KEY(Team_id), FOREIGN KEY(Owner_id), FOREIGN KEY(League_id) REFERENCES League(League_id) )"
@@ -14,6 +14,7 @@ createPOINT_RULES = "CREATE TABLE Point_Rules(Type_id INT, Pt_type VARCHAR(15), 
 #DECIMAL(4, 1) allows values like 99.9 or 0.1
 
 #Populating table
+
 
 
 

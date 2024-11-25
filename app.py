@@ -21,6 +21,7 @@ cursor = connection.cursor()
 
 #initialize tables and populate
 
+
 query1 = "SELECT * FROM League"
 
 cursor.execute(declarations.createDB)

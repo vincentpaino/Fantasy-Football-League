@@ -57,3 +57,9 @@ app.py: Acts as the entry point, orchestrating the workflow by calling functions
 Database-related code is grouped in db/ but without excessive splitting.
 Miscellaneous helpers go into utils.py.
 
+Key Points for 3NF:
+Primary Key Exists: The table must already satisfy 2NF.
+No Transitive Dependencies: Non-key attributes cannot depend on other non-key attributes. They must depend only on the primary key.
+Minimal Redundancy: Ensures that data is stored only where it belongs, reducing redundancy and improving integrity.
+
+
