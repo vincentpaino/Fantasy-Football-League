@@ -13,7 +13,7 @@ createDRAFT_PICKS = "CREATE TABLE Draft_Picks(League_id INT, Team_id INT, Player
 createPOINT_RULES = "CREATE TABLE Point_Rules(Type_id INT, Pt_type VARCHAR(15), Pt_value DECIMAL(4,1), Pt_per_yd DECIMAL(4, 1), PRIMARY KEY(Type_id))"
 #DECIMAL(4, 1) allows values like 99.9 or 0.1
 
-#Populating table
+#Make Current_week attribute a boolean?
 
 
 

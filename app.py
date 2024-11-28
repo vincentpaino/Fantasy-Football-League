@@ -22,10 +22,15 @@ cursor = connection.cursor()
 #initialize tables and populate
 
 
-query1 = "SELECT * FROM League"
-
 cursor.execute(declarations.createDB)
-cursor.execute(query1)
+
+#import queries from queries
+
+cursor.execute(queries.query1)
+
+for x in cursor:
+    print(x)
+
 results = cursor.fetchall()
 
 for row in results:
