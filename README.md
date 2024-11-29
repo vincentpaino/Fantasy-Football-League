@@ -21,7 +21,7 @@ of Python and its own libraries. This isolation ensures that the dependencies yo
 for one project don’t interfere with other projects."
 
 "After creating the environment, you’ll need to activate it to use the isolated interpreter and libraries."
-Command: venv\Scripts\activate
+Command: venv\Scripts\activate (Have to do this each time, you'll see (venv) \Users\... in the terminal)
 
 Git help:
 
