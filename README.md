@@ -63,3 +63,14 @@ No Transitive Dependencies: Non-key attributes cannot depend on other non-key at
 Minimal Redundancy: Ensures that data is stored only where it belongs, reducing redundancy and improving integrity.
 
 
+Instructions for students during the Zoom demo.
+
+Step 1: Explain why your relation schemas are in 3NF (~1 min) 
+
+Step 2: Demonstrate how you create the database/tables and populate the tables for your application (~1 mins) 
+
+Step 3: Demonstrate your application’s first functionality (~2 mins)  
+
+Step 4: Demonstrate your application’s second functionality (~2 mins) 
+
+Step 5: Demonstrate your application’s third functionality (~2 mins) 
