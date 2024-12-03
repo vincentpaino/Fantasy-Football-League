@@ -4,27 +4,24 @@ import queries
 import data
 
 # Define the connection parameters
-connection = mysql.connector.connect(
-    host="localhost",         # or the server address if hosted remotely
-    user="vincentpaino",     # MySQL username
-    password="Vin5774593819!", # MySQL password
-    database="Fantasy_Football_DB"  
-)
-
-
-
-
-
-
-
-
-
-#Define connection parameters
 def get_connection():
+    # Connect without specifying the database initially
+    connection = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="Vin5774593819!"
+    )
+    cursor = connection.cursor()
+    
+    # Create the database if it doesn't exist
+    cursor.execute(declarations.createDB)
+    cursor.close()
+
+    # Reconnect specifying the database
     return mysql.connector.connect(
-        host="localhost",         # or the server address if hosted remotely
-        user="vincentpaino",      # MySQL username
-        password="Vin5774593819!", # MySQL password
+        host="localhost",
+        user="root",
+        password="Vin5774593819!",
         database="Fantasy_Football_DB"
     )
 
@@ -39,9 +36,45 @@ def main():
     # statements in Python
     cursor = connection.cursor()
 
-    cursor.execute(declarations.createDB)
+    cursor.execute(declarations.createLEAGUE)
+    cursor.execute(declarations.createDRAFT)
+    cursor.execute(declarations.createWEEK)
+    cursor.execute(declarations.createOWNER)
+    cursor.execute(declarations.createTEAM)
+    cursor.execute(declarations.createROSTER)
+    cursor.execute(declarations.createPLAYER)
+    cursor.execute(declarations.createPLAYER_STATS)
+    cursor.execute(declarations.createTRANSACTIONS)
+    cursor.execute(declarations.createDRAFT_PICKS)
+    cursor.execute(declarations.createPOINT_RULES)
+
+    # Clears any loose data from previous tests
+    # List of tables to truncate
+    tables_to_clear = [
+        "League", "Draft", "Week", "Owner", "Team", "Roster", "Player",
+        "Player_Stats", "Transactions", "Draft_Picks", "Point_Rules"
+    ]
+
+    # Truncate each table before inserting new data
+    for table in tables_to_clear:
+        cursor.execute(f"TRUNCATE TABLE {table}")
+
+    cursor.execute(data.popLEAGUE)
+    cursor.execute(data.popDRAFT)
+    cursor.execute(data.popWEEK)
+    cursor.execute(data.popOWNER)
+    cursor.execute(data.popTEAM)
+    cursor.execute(data.popROSTER)
+    cursor.execute(data.popPLAYER)
+    cursor.execute(data.popPLAYER_STATS)
+    cursor.execute(data.popTRANSACTIONS)
+    cursor.execute(data.popDRAFT_PICKS)
+    cursor.execute(data.popPOINT_RULES)
 
     cursor.execute(queries.query1)
+    cursor.execute(queries.query2)
+    cursor.execute(queries.query3)
+
 
     for x in cursor:
         print(x)
@@ -50,9 +83,6 @@ def main():
 
     for row in results:
         print(row)
-    # DECLARATION FUNCTIONS
-    # POPULATE FUNCTIONS
-    # QUERY FUNCTIONS
 
     # Ending functions    
     cursor.close()
