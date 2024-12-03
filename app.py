@@ -55,7 +55,7 @@ def main():
         "Player_Stats", "Transactions", "Draft_Picks", "Point_Rules"
     ]
 
-    # Truncate each table before inserting new data (for testing)
+    # Truncate each table before inserting new data 
     for table in tables_to_clear:
         cursor.execute(f"TRUNCATE TABLE {table}")
 
