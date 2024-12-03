@@ -65,7 +65,7 @@ def main():
     cursor.execute(data.popWEEK)
     cursor.execute(data.popOWNER)
     cursor.execute(data.popTEAM)
-    # cursor.execute(data.popSTANDINGS)
+    cursor.execute(data.popSTANDINGS)
     cursor.execute(data.popROSTER)
     cursor.execute(data.popPLAYER)
     cursor.execute(data.popPLAYER_STATS)

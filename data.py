@@ -2,9 +2,9 @@
 #DATE data type: YYYY-MM-DD
 
 popLEAGUE = """
-INSERT INTO     League(League_id, League_name, No_teams, Szn_start, Szn_end)
-VALUES          (1, 'CoolLeague2024', 12, '2024-09-05', '2025-01-05'),
-                (2, 'DemonTime', 8, '2024-09-05', '2025-01-05')
+INSERT INTO     League(League_id, League_name, No_teams, Szn_start, Szn_end, Season_no)
+VALUES          (1, 'CoolLeague2024', 12, '2024-09-05', '2025-01-05', 1),
+                (2, 'DemonTimers', 8, '2024-09-05', '2025-01-05', 1)
 """
 # 3NF, fix
 popDRAFT = """
@@ -14,8 +14,8 @@ VALUES          (1, 15, , , ),
 """
 # FIX 
 popWEEK = """
-INSERT INTO     Week(Week_no, Current_week, Start_date, End_date, Season, League_id)
-VALUES          (1, 1, '2024-09-05', '2024-09-12', 1, 1)
+INSERT INTO     Week(Week_no, Current_week, Start_date, End_date, League_id)
+VALUES          (1, 1, '2024-09-05', '2024-09-12', 1)
 """
 
 popOWNER = """
@@ -30,6 +30,13 @@ INSERT INTO     Team(Team_id, Team_name, Owner_id, League_id)
 VALUES          (1, 'MontyMyBeloved', 100, 1),
                 (2, 'Simon_Craigery', 101, 1),
                 (3, 'LetHimCook', 102, 2)
+"""
+
+popSTANDINGS = """
+INSERT INTO     Standings(League_id, Week_no, Team_name, Team_rank, Wins, Losses)
+VALUES          (1, 1, 'MontyMyBeloved', 1, 1, 0),
+                (1, 1, 'Simon_Craigery', 2, 0, 1),
+                (2, 1, 'LetHimCook', 1, 1, 0)
 """
 
 popROSTER = """
@@ -48,9 +55,9 @@ VALUES          ('Ceedee', 'Lamb', 1000, 'WR','HEALTHY'),
 
 popPLAYER_STATS = """
 INSERT INTO     Player_Stats(Player_id, Team_id, Week_no, Fpts, Yds, Td, Recs, Fum, Xp, Fg)
-VALUES          (1000, 1, 1, 12.0, 30, 1, 3, 0, 0, 0),
-                (1001, 1, 1, 23.0, 200, 1, 0, 0, 0, 0),
-                (1002, 2, 1, 16.6, 102, 1, 2, 1, 0, 0)
+VALUES          (1000, 1, 12.0, 30, 1, 3, 0, 0, 0),
+                (1001, 1, 23.0, 200, 1, 0, 0, 0, 0),
+                (1002, 1, 16.6, 102, 1, 2, 1, 0, 0)
 """
 
 popTRANSACTIONS = """
@@ -70,7 +77,7 @@ VALUES          (1, 1, 1000, 'WR','HEALTHY'),
 # RETHINK Pt_per_yd ATTRIBUTE
 popPOINT_RULES = """
 INSERT INTO     Point_Rules(Type_id, Pt_type, Pt_value, Pt_per_yd)
-VALUES          (1, 'TD', 6.0, 6.0),
-                (2, 'REC', 1.0, 1.0),
-                (3, 'YD', 0.1, 0.1)
+VALUES          ('TD', 6.0, 6.0),
+                ('REC', 1.0, 1.0),
+                ('YD', 0.1, 0.1)
 """
