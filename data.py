@@ -48,35 +48,36 @@ VALUES          (1, 1, 1000, 'WR','STARTING'),
 
 popPLAYER = """
 INSERT INTO     Player(Fname, Lname, Player_id, Team_id, Position, Health)
-VALUES          ('Ceedee', 'Lamb', 1000, 'WR','HEALTHY'),
-                ('Patrick', 'Mahomes', 1001, 'QB','QUESTIONABLE'),
-                ('Isaiah', 'Pacheco', 1002, 'RB','OUT')
+VALUES          ('Ceedee', 'Lamb', 1000, 1, 'WR','HEALTHY'),
+                ('Patrick', 'Mahomes', 1001, 1, 'QB','QUESTIONABLE'),
+                ('Isaiah', 'Pacheco', 1002, 2, 'RB','OUT')
 """
 
 popPLAYER_STATS = """
 INSERT INTO     Player_Stats(Player_id, Team_id, Week_no, Fpts, Yds, Td, Recs, Fum, Xp, Fg)
-VALUES          (1000, 1, 12.0, 30, 1, 3, 0, 0, 0),
-                (1001, 1, 23.0, 200, 1, 0, 0, 0, 0),
-                (1002, 1, 16.6, 102, 1, 2, 1, 0, 0)
+VALUES          (1000, 1, 1, 12.0, 30, 1, 3, 0, 0, 0),
+                (1001, 1, 1, 23.0, 200, 1, 0, 0, 0, 0),
+                (1002, 1, 1, 16.6, 102, 1, 2, 1, 0, 0)
 """
 
 popTRANSACTIONS = """
 INSERT INTO     Transactions(Team_id, Player_id, Roster_status, Date)
 VALUES          (1, 1000, 'DRAFTED', '2024-09-05'),
                 (1, 1001, 'DRAFTED', '2024-09-05'),
-                (2, 1002, 'DRAFTED', '2024-09-05'),
+                (2, 1002, 'DRAFTED', '2024-09-05')
 
 """
 # MAKING DRAFT_PICKS OPTIONAL
-popDRAFT_PICKS = """
-INSERT INTO     Draft_Picks(Team_id, Week_no, Player_id, Position, Lineup_status)
-VALUES          (1, 1, 1000, 'WR','HEALTHY'),
-                (1, 1, 1001, 'QB','QUESTIONABLE'),
-                (2, 1, 1002, 'RB','OUT')
-"""
+#popDRAFT_PICKS = """
+#INSERT INTO     Draft_Picks(Team_id, Week_no, Player_id, Position, Lineup_status)
+#VALUES          (1, 1, 1000, 'WR','HEALTHY'),
+#                (1, 1, 1001, 'QB','QUESTIONABLE'),
+#                (2, 1, 1002, 'RB','OUT')
+#"""
+
 # RETHINK Pt_per_yd ATTRIBUTE
 popPOINT_RULES = """
-INSERT INTO     Point_Rules(Type_id, Pt_type, Pt_value, Pt_per_yd)
+INSERT INTO     Point_Rules(Pt_type, Pt_value, Pt_per_yd)
 VALUES          ('TD', 6.0, 6.0),
                 ('REC', 1.0, 1.0),
                 ('YD', 0.1, 0.1)

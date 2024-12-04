@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS League (
     No_teams INT, 
     Szn_start DATE, 
     Szn_end DATE, 
-    Season INT
+    Season_no INT
 )
 """
 
@@ -127,19 +127,19 @@ CREATE TABLE IF NOT EXISTS Transactions (
 )
 """
 
-createDRAFT_PICKS = """
-CREATE TABLE IF NOT EXISTS Draft_Picks (
-    League_id INT, 
-    Team_id INT, 
-    Player_id INT, 
-    Rank INT, 
-    Pick INT, 
-    Round INT, 
-    PRIMARY KEY(League_id, Pick), 
-    FOREIGN KEY(Team_id) REFERENCES Team(Team_id), 
-    FOREIGN KEY(League_id) REFERENCES League(League_id)
-)
-"""
+# createDRAFT_PICKS = """
+# CREATE TABLE IF NOT EXISTS Draft_Picks (
+#    League_id INT, 
+#    Team_id INT, 
+#    Player_id INT, 
+#    Rank INT, 
+#    Pick INT, 
+#    Round INT, 
+#    PRIMARY KEY(League_id, Pick), 
+#    FOREIGN KEY(Team_id) REFERENCES Team(Team_id), 
+#    FOREIGN KEY(League_id) REFERENCES League(League_id)
+#)
+#"""
 
 createPOINT_RULES = """
 CREATE TABLE IF NOT EXISTS Point_Rules (
