@@ -45,6 +45,7 @@ def main():
     cursor.execute(declarations.createROSTER)
     cursor.execute(declarations.createPLAYER_STATS)
     cursor.execute(declarations.createTRANSACTIONS)
+    cursor.execute(declarations.createMATCHUPS)
     # cursor.execute(declarations.createDRAFT_PICKS)
     cursor.execute(declarations.createPOINT_RULES)
 
@@ -70,6 +71,7 @@ def main():
     cursor.execute(data.popROSTER)
     cursor.execute(data.popPLAYER_STATS)
     cursor.execute(data.popTRANSACTIONS)
+    cursor.execute(data.popMATCHUPS)
     # cursor.execute(data.popDRAFT_PICKS)
     cursor.execute(data.popPOINT_RULES)
 

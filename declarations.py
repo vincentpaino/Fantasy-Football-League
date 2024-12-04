@@ -127,6 +127,20 @@ CREATE TABLE IF NOT EXISTS Transactions (
 )
 """
 
+createMATCHUPS = """
+CREATE TABLE IF NOT EXISTS Matchups (
+    Matchup_id INTEGER PRIMARY KEY,
+    Week_no INTEGER ,
+    Home_team_id INTEGER ,
+    Away_team_id INTEGER ,
+    Home_score DECIMAL(4, 1),
+    Away_score DECIMAL(4, 1),
+    FOREIGN KEY (Week_no) REFERENCES Week(Week_no),
+    FOREIGN KEY (Home_team_id) REFERENCES Team(Team_id),
+    FOREIGN KEY (Away_team_id) REFERENCES Team(Team_id)
+)
+"""
+
 # createDRAFT_PICKS = """
 # CREATE TABLE IF NOT EXISTS Draft_Picks (
 #    League_id INT, 

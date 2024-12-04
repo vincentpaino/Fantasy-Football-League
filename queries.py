@@ -1,7 +1,7 @@
 #Queries and functions and such
 
-# Determine winning team This function identifies and outputs the winning 
-# team for a specified matchup in a given week, and updates the standings accordingly
+# Determine winning team- This function identifies and outputs the winning 
+# team for a specified matchup in a given week, (and updates the standings accordingly)
 query1 = """
 SELECT * 
 FROM League

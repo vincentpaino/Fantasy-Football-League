@@ -22,21 +22,24 @@ popOWNER = """
 INSERT INTO     Owner(Fname, Lname, Owner_id, League_id)
 VALUES          ('Vince', 'Paino', 100, 1),
                 ('Simon', 'Craigery', 101, 1),
-                ('Eli', 'Bungus', 102, 2)
+                ('Eli', 'Bungus', 102, 2),
+                ('Homer', 'Simpson', 103, 2)
 """
 
 popTEAM = """
 INSERT INTO     Team(Team_id, Team_name, Owner_id, League_id)
 VALUES          (1, 'MontyMyBeloved', 100, 1),
                 (2, 'Simon_Craigery', 101, 1),
-                (3, 'LetHimCook', 102, 2)
+                (3, 'LetHimCook', 102, 2),
+                (4, 'The_Donuts', 103, 2)
 """
-
+#Standings are intentionally left NOT updated, query1 updates 
 popSTANDINGS = """
 INSERT INTO     Standings(League_id, Week_no, Team_name, Team_rank, Wins, Losses)
-VALUES          (1, 1, 'MontyMyBeloved', 1, 1, 0),
-                (1, 1, 'Simon_Craigery', 2, 0, 1),
-                (2, 1, 'LetHimCook', 1, 1, 0)
+VALUES          (1, 1, 'MontyMyBeloved', 1, 0, 0),
+                (1, 1, 'Simon_Craigery', 1, 0, 0),
+                (2, 1, 'LetHimCook', 1, 0, 0),
+                (2, 1, 'The_Donuts', 1, 0, 0)
 """
 
 popROSTER = """
@@ -65,7 +68,12 @@ INSERT INTO     Transactions(Transaction_id, Team_id, Player_id, Roster_status, 
 VALUES          (1, 1, 1000, 'DRAFTED', '2024-09-05'),
                 (2, 1, 1001, 'DRAFTED', '2024-09-05'),
                 (3, 2, 1002, 'DRAFTED', '2024-09-05')
+"""
 
+popMATCHUPS = """
+INSERT INTO     Matchups(Matchup_id, Week_no, Home_team_id, Away_team_id, Home_score, Away_score)
+VALUES          (1, 1, 1, 2, 24.5, 17.2),
+                (2, 1, 3, 4, 35.0, 28.6)
 """
 # MAKING DRAFT_PICKS OPTIONAL
 #popDRAFT_PICKS = """
