@@ -73,18 +73,19 @@ def main():
     # cursor.execute(data.popDRAFT_PICKS)
     cursor.execute(data.popPOINT_RULES)
 
+    # Query executions
     cursor.execute(queries.query1)
-    cursor.execute(queries.query2)
-    cursor.execute(queries.query3)
-
-
-    for x in cursor:
-        print(x)
 
     results = cursor.fetchall()
-
     for row in results:
         print(row)
+
+    #cursor.execute(queries.query2)
+    #cursor.execute(queries.query3)
+
+    
+
+    
 
     # Ending functions    
     cursor.close()

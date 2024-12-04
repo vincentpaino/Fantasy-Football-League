@@ -5,7 +5,7 @@
 query1 = """
 SELECT * 
 FROM League
-WHERE No_teams > 12
+WHERE No_teams >= 12
 """
 
 # /This function outputs the player in a specified 
