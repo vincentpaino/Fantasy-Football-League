@@ -6,7 +6,7 @@ CREATE DATABASE IF NOT EXISTS Fantasy_Football_DB
 
 createLEAGUE = """
 CREATE TABLE IF NOT EXISTS League (
-    League_id INT AUTO_INCREMENT PRIMARY KEY, 
+    League_id INT PRIMARY KEY, 
     League_name VARCHAR(50) NOT NULL, 
     No_teams INT, 
     Szn_start DATE, 

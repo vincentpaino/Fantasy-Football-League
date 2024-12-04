@@ -6,11 +6,11 @@ INSERT INTO     League(League_id, League_name, No_teams, Szn_start, Szn_end, Sea
 VALUES          (1, 'CoolLeague2024', 12, '2024-09-05', '2025-01-05', 1),
                 (2, 'DemonTimers', 8, '2024-09-05', '2025-01-05', 1)
 """
-# 3NF, fix
+# Removed Pick_order attribute (refers to league managers)
 popDRAFT = """
-INSERT INTO     Draft(League_id, Rounds, Pick_order, Start_time, End_time)
-VALUES          (1, 15, , , ),
-                (2, 15, , , , )
+INSERT INTO     Draft(League_id, Rounds, Start_time, End_time)
+VALUES          (1, 15, 2024-08-30, 2024-08-30),
+                (2, 15, 2024-08-30, 2024-08-30)
 """
 # FIX 
 popWEEK = """

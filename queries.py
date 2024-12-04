@@ -5,7 +5,7 @@
 query1 = """
 SELECT * 
 FROM League
-WHERE no_teams > 12
+WHERE No_teams > 12
 """
 
 # /This function outputs the player in a specified 
@@ -13,12 +13,12 @@ WHERE no_teams > 12
 query2 = """
 SELECT * 
 FROM League
-WHERE no_teams > 12
+WHERE No_teams > 12
 """
 
 # This function removes a player in a team’s roster
 query3 = """
 UPDATE   
 FROM League
-WHERE no_teams > 12
+WHERE No_teams > 12
 """

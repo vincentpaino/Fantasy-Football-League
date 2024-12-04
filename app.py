@@ -3,7 +3,6 @@ import declarations
 import queries
 import data
 
-# Define the connection parameters
 def get_connection():
     # Connect without specifying the database initially
     connection = mysql.connector.connect(
@@ -41,24 +40,24 @@ def main():
     cursor.execute(declarations.createWEEK)
     cursor.execute(declarations.createOWNER)
     cursor.execute(declarations.createTEAM)
+    cursor.execute(declarations.createPLAYER)
     cursor.execute(declarations.createSTANDINGS)
     cursor.execute(declarations.createROSTER)
-    cursor.execute(declarations.createPLAYER)
     cursor.execute(declarations.createPLAYER_STATS)
     cursor.execute(declarations.createTRANSACTIONS)
-    cursor.execute(declarations.createDRAFT_PICKS)
+    # cursor.execute(declarations.createDRAFT_PICKS)
     cursor.execute(declarations.createPOINT_RULES)
 
     # Clears any loose data from previous tests
-    # List of tables to truncate
+    # List of tables to delete (no Draft_Picks table)
     tables_to_clear = [
         "League", "Draft", "Week", "Owner", "Team", "Roster", "Player",
-        "Player_Stats", "Transactions", "Draft_Picks", "Point_Rules"
+        "Player_Stats", "Transactions", "Point_Rules"
     ]
 
-    # Truncate each table before inserting new data 
+    # Delete each table before inserting new data w/o breaking any constraints
     for table in tables_to_clear:
-        cursor.execute(f"TRUNCATE TABLE {table}")
+        cursor.execute(f"DELETE FROM {table}")
 
     cursor.execute(data.popLEAGUE)
     cursor.execute(data.popDRAFT)
@@ -70,7 +69,7 @@ def main():
     cursor.execute(data.popPLAYER)
     cursor.execute(data.popPLAYER_STATS)
     cursor.execute(data.popTRANSACTIONS)
-    cursor.execute(data.popDRAFT_PICKS)
+    # cursor.execute(data.popDRAFT_PICKS)
     cursor.execute(data.popPOINT_RULES)
 
     cursor.execute(queries.query1)
