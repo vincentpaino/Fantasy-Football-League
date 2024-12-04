@@ -49,7 +49,8 @@ def main():
     cursor.execute(declarations.createPOINT_RULES)
 
     # Clears any loose data from previous tests
-    # List of tables to delete (no Draft_Picks table)
+    # List of tables to delete (no Draft_Picks table
+    
     tables_to_clear = [
         "League", "Draft", "Week", "Owner", "Team", "Roster", "Player",
         "Player_Stats", "Transactions", "Point_Rules"
@@ -65,8 +66,8 @@ def main():
     cursor.execute(data.popOWNER)
     cursor.execute(data.popTEAM)
     cursor.execute(data.popSTANDINGS)
-    cursor.execute(data.popROSTER)
     cursor.execute(data.popPLAYER)
+    cursor.execute(data.popROSTER)
     cursor.execute(data.popPLAYER_STATS)
     cursor.execute(data.popTRANSACTIONS)
     # cursor.execute(data.popDRAFT_PICKS)

@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS Player (
 
 createPLAYER_STATS = """
 CREATE TABLE IF NOT EXISTS Player_Stats (
-    Player_id INT, 
+    Player_id INT,
     Week_no INT, 
     Fpts DECIMAL(4,1), 
     Yds INT, 

@@ -9,8 +9,8 @@ VALUES          (1, 'CoolLeague2024', 12, '2024-09-05', '2025-01-05', 1),
 # Removed Pick_order attribute (refers to league managers)
 popDRAFT = """
 INSERT INTO     Draft(League_id, Rounds, Start_time, End_time)
-VALUES          (1, 15, 2024-08-30, 2024-08-30),
-                (2, 15, 2024-08-30, 2024-08-30)
+VALUES          (1, 15, '2024-08-30', '2024-08-30'),
+                (2, 15, '2024-08-30', '2024-08-30')
 """
 # FIX 
 popWEEK = """
@@ -54,17 +54,17 @@ VALUES          ('Ceedee', 'Lamb', 1000, 1, 'WR','HEALTHY'),
 """
 
 popPLAYER_STATS = """
-INSERT INTO     Player_Stats(Player_id, Team_id, Week_no, Fpts, Yds, Td, Recs, Fum, Xp, Fg)
-VALUES          (1000, 1, 1, 12.0, 30, 1, 3, 0, 0, 0),
-                (1001, 1, 1, 23.0, 200, 1, 0, 0, 0, 0),
-                (1002, 1, 1, 16.6, 102, 1, 2, 1, 0, 0)
+INSERT INTO     Player_Stats(Player_id, Week_no, Fpts, Yds, Td, Recs, Fum, Xp, Fg)
+VALUES          (1000, 1, 12.0, 30, 1, 3, 0, 0, 0),
+                (1001, 1, 23.0, 200, 1, 0, 0, 0, 0),
+                (1002, 1, 16.6, 102, 1, 2, 1, 0, 0)
 """
 
 popTRANSACTIONS = """
-INSERT INTO     Transactions(Team_id, Player_id, Roster_status, Date)
-VALUES          (1, 1000, 'DRAFTED', '2024-09-05'),
-                (1, 1001, 'DRAFTED', '2024-09-05'),
-                (2, 1002, 'DRAFTED', '2024-09-05')
+INSERT INTO     Transactions(Transaction_id, Team_id, Player_id, Roster_status, Date)
+VALUES          (1, 1, 1000, 'DRAFTED', '2024-09-05'),
+                (2, 1, 1001, 'DRAFTED', '2024-09-05'),
+                (3, 2, 1002, 'DRAFTED', '2024-09-05')
 
 """
 # MAKING DRAFT_PICKS OPTIONAL
