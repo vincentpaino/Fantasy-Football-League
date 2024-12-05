@@ -5,6 +5,40 @@ This application is ran from the python3 package mysql:
 https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html
 
 
+Requirements to deploy this program:
+
+Before starting, ensure you have the following installed:
+
+Python or Python3 (Preferably the latest version)
+pip (Python package installer)
+
+Setup Instructions:
+Clone the repository to your local machine:
+git clone https://github.comyour-usernamefantasy-football-database.git
+Navigate to the project directory:
+bash
+Copy code
+cd fantasy-football-database
+Set up a virtual environment (recommended):
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+Install all dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Set up the database by running the setup script:
+bash
+Copy code
+python setup_database.py
+This will create an SQLite database where all fantasy football data (players, stats, etc.) will be stored.
+
+
+
+
+
+
 
 
 
