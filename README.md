@@ -9,8 +9,9 @@ Requirements to deploy this program:
 
 Before starting, ensure you have the following installed:
 
-Python or Python3 (Preferably the latest version)
-pip (Python package installer)
+Python or Python3 (Preferably the latest version),
+pip (Python package installer),
+MySQL Server and Workbench
 
 ### Setup Instructions:
 
