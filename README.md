@@ -1,4 +1,4 @@
-Vince Paino's CS_3380 Project
+## Vince Paino's CS_3380 Project
 -- Fantasy Football Database --
 
 This application is ran from the python3 package mysql:
