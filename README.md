@@ -18,7 +18,7 @@ MySQL Server and Workbench
 Clone the repository:
 git clone https://github.com/vincentpaino/Fantasy-Football-League
 Navigate to the project directory:
-cd fantasy-football-database
+(i.e. cd fantasy-football-database)
 Set up a virtual environment (optional):
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
