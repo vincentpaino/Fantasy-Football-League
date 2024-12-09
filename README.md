@@ -1,4 +1,4 @@
-## Vince Paino's CS_3380 Project
+# Vince Paino's CS_3380 Project
 -- Fantasy Football Database --
 
 This application is ran from the python3 package mysql:
@@ -12,7 +12,7 @@ Before starting, ensure you have the following installed:
 Python or Python3 (Preferably the latest version)
 pip (Python package installer)
 
-# Setup Instructions:
+### Setup Instructions:
 
 Clone the repository:
 git clone https://github.com/vincentpaino/Fantasy-Football-League
