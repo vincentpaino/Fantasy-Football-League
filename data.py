@@ -15,7 +15,7 @@ VALUES          (1, 15, '2024-08-30', '2024-08-30'),
 # FIX 
 popWEEK = """
 INSERT INTO     Week(Week_no, Current_week, Start_date, End_date, League_id)
-VALUES          (1, 1, '2024-09-05', '2024-09-12', 1)
+VALUES          (1, TRUE, '2024-09-05', '2024-09-12', 1)
 """
 
 popOWNER = """

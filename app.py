@@ -28,7 +28,7 @@ def main():
     connection = get_connection()
 
     if connection.is_connected():
-        print("Connection success!")
+        print("Connection success!\n")
 
     # Creating an instance of 'cursor' class 
     # which is used to execute the SQL 
@@ -76,18 +76,30 @@ def main():
     cursor.execute(data.popPOINT_RULES)
 
     # Query executions
+    print("The winning teams of the current week are...")
     cursor.execute(queries.query1)
 
     results = cursor.fetchall()
     for row in results:
         print(row)
 
-    #cursor.execute(queries.query2)
-    #cursor.execute(queries.query3)
+    print("\n")
+    print("The player with the most Fantasy points in Week 1 was...")
+    cursor.execute(queries.query2)
 
-    
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
 
+    print("\n")
+    print("Removing player from a roster with ID 1000...\n")
+    cursor.execute(queries.query3)
+
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
     
+    print("\n")
 
     # Ending functions    
     cursor.close()
