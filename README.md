@@ -24,7 +24,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 Install all dependencies:
 pip install mysql-connector-python
-Set up the database by including your own connection to the MySQL Server:
+Set up the database by including your own connection (on your own local machine) to the MySQL Server:
 Example code:
     connection = mysql.connector.connect(
         host="localhost",
