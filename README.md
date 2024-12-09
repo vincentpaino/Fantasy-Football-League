@@ -13,26 +13,25 @@ Python or Python3 (Preferably the latest version)
 pip (Python package installer)
 
 Setup Instructions:
-Clone the repository to your local machine:
-git clone https://github.comyour-usernamefantasy-football-database.git
+Clone the repository:
+git clone https://github.com/vincentpaino/Fantasy-Football-League
 Navigate to the project directory:
-bash
-Copy code
 cd fantasy-football-database
-Set up a virtual environment (recommended):
-bash
-Copy code
+Set up a virtual environment (optional):
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 Install all dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Set up the database by running the setup script:
-bash
-Copy code
-python setup_database.py
-This will create an SQLite database where all fantasy football data (players, stats, etc.) will be stored.
+pip install mysql-connector-python
+Set up the database by including your own connection to the MySQL Server:
+Example code:
+    connection = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="Vin5774593819!"
+    )
+    cursor = connection.cursor()
+
+main() function is ran through app.py (python app.py)
 
 
 
