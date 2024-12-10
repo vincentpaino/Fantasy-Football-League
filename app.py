@@ -91,15 +91,24 @@ def main():
     for row in results:
         print(row)
 
-    print("\n")
-    print("Removing player from a roster with ID 1000...\n")
-    cursor.execute(queries.query3)
+    print("Printing Player table...\n")
+    cursor.execute(queries.printPlayer)
 
     results = cursor.fetchall()
     for row in results:
         print(row)
-    
+
     print("\n")
+    print("Removing player from a roster with ID 1000...\n")
+    cursor.execute(queries.query3p1)
+    cursor.execute(queries.query3p2)
+    
+    print("Printing updated Player table...\n")
+    cursor.execute(queries.printPlayer)
+
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
 
     # Ending functions    
     cursor.close()

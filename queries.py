@@ -35,13 +35,19 @@ WHERE PS.Week_no = 1
 # This function removes a player in a team’s roster
 # Specific id must be written in the query 
 # Could update TRANSACTIONS
-query3 = """
+query3p1 = """
 DELETE R    
 FROM ROSTER AS R
 JOIN PLAYER AS P ON R.Player_id = P.Player_id
 WHERE R.Player_id = 1000;
-
+"""
+query3p2 = """
 UPDATE PLAYER
 SET Team_id = NULL
 WHERE Player_id = 1000;
+"""
+
+printPlayer = """
+SELECT *
+FROM Player
 """
