@@ -29,7 +29,7 @@ Example code:
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Vin5774593819!"
+        password="rootpassword"
     )
     cursor = connection.cursor()
 
