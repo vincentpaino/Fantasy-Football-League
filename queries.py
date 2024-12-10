@@ -49,5 +49,5 @@ WHERE Player_id = 1000;
 
 printPlayer = """
 SELECT *
-FROM Player
+FROM PLAYER
 """
