@@ -1,31 +1,10 @@
-import mysql.connector
+import config
 import declarations
 import queries
 import data
 
-def get_connection():
-    # Connect without specifying the database initially
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Vin5774593819!"
-    )
-    cursor = connection.cursor()
-    
-    # Create the database if it doesn't exist
-    cursor.execute(declarations.createDB)
-    cursor.close()
-
-    # Reconnect specifying the database
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Vin5774593819!",
-        database="Fantasy_Football_DB"
-    )
-
 def main():
-    connection = get_connection()
+    connection = config.get_connection()
 
     if connection.is_connected():
         print("Connection success!\n")
